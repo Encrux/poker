@@ -15,6 +15,19 @@ public class Hand {
         this.cards = cards;
     }
 
+    public HandClass getHandClass() {
+        if (isStraightFlush(cards)) return HandClass.StraightFlush;
+        if (isFourOfAKind(cards)) return HandClass.FourOfAKind;
+        if (isFullHouse(cards)) return HandClass.FullHouse;
+        if (isFlush(cards)) return HandClass.Flush;
+        if (isStraight(cards)) return HandClass.Straight;
+        if (isThreeOfAKind(cards)) return HandClass.ThreeOfAKind;
+        if (isTwoPairs(cards)) return HandClass.TwoPairs;
+        if (isPair(cards)) return HandClass.Pair;
+
+        return HandClass.HighCard;
+    }
+
     private boolean isPair(final List<Card> cards) {
         return false;
     }
@@ -45,5 +58,9 @@ public class Hand {
 
     private boolean isStraightFlush(final List<Card> cards) {
         return false;
+    }
+
+    public List<Card> getCards() {
+        return cards;
     }
 }
