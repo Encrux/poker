@@ -21,6 +21,10 @@ public class Hand {
     }
 
     public HandClass getHandClass() {
+        return Hand.getHandClass(this.cards);
+    }
+
+    public static HandClass getHandClass(final List<Card> cards) {
         if (isStraightFlush(cards)) return HandClass.StraightFlush;
         if (isFourOfAKind(cards)) return HandClass.FourOfAKind;
         if (isFullHouse(cards)) return HandClass.FullHouse;
@@ -33,11 +37,11 @@ public class Hand {
         return HandClass.HighCard;
     }
 
-    private boolean isPair(final List<Card> cards) {
+    private static boolean isPair(final List<Card> cards) {
         return isNOfAKind(cards, 2);
     }
 
-    private boolean isTwoPairs(final List<Card> cards) {
+    private static boolean isTwoPairs(final List<Card> cards) {
         if (isNOfAKind(cards, 2)) {
             final var cardsPerValue = groupCardsByValue(cards);
             return cardsPerValue.size() == 3;
@@ -46,11 +50,11 @@ public class Hand {
         return false;
     }
 
-    private boolean isThreeOfAKind(final List<Card> cards) {
+    private static boolean isThreeOfAKind(final List<Card> cards) {
         return isNOfAKind(cards, 3);
     }
 
-    private boolean isStraight(final List<Card> cards) {
+    private static boolean isStraight(final List<Card> cards) {
         final var lowest = cards.get(0).getValue().ordinal();
 
         for (int i = lowest; i <= lowest + 3; i++) {
@@ -63,12 +67,12 @@ public class Hand {
         return true;
     }
 
-    private boolean isFlush(final List<Card> cards) {
+    private static boolean isFlush(final List<Card> cards) {
         final var cardsPerSuit = groupCardsBySuit(cards);
         return cardsPerSuit.size() == 1;
     }
 
-    private boolean isFullHouse(final List<Card> cards) {
+    private static boolean isFullHouse(final List<Card> cards) {
         if (isNOfAKind(cards, 3)) {
             final var cardsPerValue = groupCardsByValue(cards);
             return cardsPerValue.size() == 2;
@@ -76,15 +80,15 @@ public class Hand {
         return false;
     }
 
-    private boolean isFourOfAKind(final List<Card> cards) {
+    private static boolean isFourOfAKind(final List<Card> cards) {
         return isNOfAKind(cards, 4);
     }
 
-    private boolean isStraightFlush(final List<Card> cards) {
+    private static boolean isStraightFlush(final List<Card> cards) {
         return isStraight(cards) && isFlush(cards);
     }
 
-    private boolean isNOfAKind(final List<Card> cards, final int n) {
+    private static boolean isNOfAKind(final List<Card> cards, final int n) {
         final var cardsPerValue = groupCardsByValue(cards);
 
         for (List<Card> group : cardsPerValue.values()) {
