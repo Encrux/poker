@@ -15,16 +15,16 @@ public class ExampleHands {
 
     static final List<Card> HIGH_CARD = List.of(
             new Card(CardSuit.C, CardValue.V2),
-            new Card(CardSuit.C, CardValue.V4),
-            new Card(CardSuit.C, CardValue.V6),
-            new Card(CardSuit.C, CardValue.V8),
+            new Card(CardSuit.H, CardValue.V4),
+            new Card(CardSuit.D, CardValue.V6),
+            new Card(CardSuit.S, CardValue.V8),
             new Card(CardSuit.C, CardValue.V10)
     );
 
     static final List<Card> HIGH_CARD_1 = List.of(
             new Card(CardSuit.C, CardValue.V2),
-            new Card(CardSuit.C, CardValue.V4),
-            new Card(CardSuit.C, CardValue.V6),
+            new Card(CardSuit.D, CardValue.V4),
+            new Card(CardSuit.S, CardValue.V6),
             new Card(CardSuit.C, CardValue.V8),
             new Card(CardSuit.C, CardValue.A)
     );
