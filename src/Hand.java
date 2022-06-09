@@ -115,4 +115,13 @@ public class Hand {
     public List<Card> getCards() {
         return cards;
     }
+
+    public String toString() {
+        StringBuilder res = new StringBuilder();
+        for (Card card : cards) {
+            res.append(card.toString()).append(" ");
+        }
+
+        return res.toString();
+    }
 }

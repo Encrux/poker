@@ -15,6 +15,20 @@ public class HandComparator {
         this.hand2 = hand2;
     }
 
+    public void printWinner() {
+        var res = "it's a tie!";
+
+        if (determineWinner() == Winner.HAND1) {
+            res = "Hand 1 has won!";
+        }
+
+        if (determineWinner() == Winner.HAND2) {
+            res = "Hand 2 has won!";
+        }
+
+        System.out.println("hand1: " + hand1.toString() + "| hand2: " + hand2.toString() + " | -> " + res);
+    }
+
     public Winner determineWinner() {
         return determineWinner(hand1.getCards(), hand2.getCards());
     }

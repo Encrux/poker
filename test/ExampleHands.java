@@ -2,7 +2,7 @@ import model.Card;
 import model.CardSuit;
 import model.CardValue;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * Example hands.

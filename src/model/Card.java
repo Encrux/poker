@@ -21,4 +21,8 @@ public class Card implements Comparable<Card>{
     public int compareTo(Card o) {
         return Integer.compare(this.value.ordinal(), o.value.ordinal());
     }
+
+    public String toString() {
+        return suit.toString() + "." + value.toString();
+    }
 }
