@@ -96,11 +96,11 @@ public class Hand {
         return false;
     }
 
-    private Map<CardValue, List<Card>> groupCardsByValue(final List<Card> cards) {
+    public static Map<CardValue, List<Card>> groupCardsByValue(final List<Card> cards) {
         return cards.stream().collect(groupingBy(Card::getValue));
     }
 
-    private Map<CardSuit, List<Card>> groupCardsBySuit(final List<Card> cards) {
+    public static Map<CardSuit, List<Card>> groupCardsBySuit(final List<Card> cards) {
         return cards.stream().collect(groupingBy(Card::getSuit));
     }
 
