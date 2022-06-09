@@ -1,6 +1,6 @@
 package model;
 
-public class Card {
+public class Card implements Comparable<Card>{
     private final CardSuit suit;
     private final CardValue value;
 
@@ -15,5 +15,10 @@ public class Card {
 
     public CardValue getValue() {
         return value;
+    }
+
+    @Override
+    public int compareTo(Card o) {
+        return Integer.compare(this.value.ordinal(), o.value.ordinal());
     }
 }
