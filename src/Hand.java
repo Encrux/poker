@@ -55,14 +55,18 @@ public class Hand {
     }
 
     private static boolean isStraight(final List<Card> cards) {
-        final var lowest = cards.get(0).getValue().ordinal();
+        if (cards.size() < 5) {
+            return false;
+        }
 
-        for (int i = lowest; i <= lowest + 3; i++) {
-            final var current = cards.get(i).getValue().ordinal();
+        var current = cards.get(0).getValue().ordinal();
+
+        for (int i = 0; i <= 3; i++) {
             final var next = cards.get(i + 1).getValue().ordinal();
             if (current + 1 != next) {
                 return false;
             }
+            current = next;
         }
         return true;
     }
