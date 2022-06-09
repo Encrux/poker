@@ -106,7 +106,7 @@ public class ExampleHands {
             new Card(CardSuit.C, CardValue.V2),
             new Card(CardSuit.C, CardValue.V6),
             new Card(CardSuit.C, CardValue.V6),
-            new Card(CardSuit.C, CardValue.V10)
+            new Card(CardSuit.C, CardValue.A)
     );
 
     static final List<Card> FULL_HOUSE = List.of(

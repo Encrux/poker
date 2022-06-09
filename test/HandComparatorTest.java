@@ -9,47 +9,47 @@ public class HandComparatorTest {
 
     @Test
     public void compareHighCard() {
-        validate(ExampleHands.HIGH_CARD, ExampleHands.HIGH_CARD_1, Winner.HAND1);
+        validate(ExampleHands.HIGH_CARD, ExampleHands.HIGH_CARD_1, Winner.HAND2);
     }
 
     @Test
     public void comparePair() {
-        validate(ExampleHands.PAIR, ExampleHands.PAIR_1, Winner.HAND1);
+        validate(ExampleHands.PAIR, ExampleHands.PAIR_1, Winner.HAND2);
     }
 
     @Test
     public void compareTwoPairs() {
-        validate(ExampleHands.TWO_PAIRS, ExampleHands.TWO_PAIRS_1, Winner.HAND1);
+        validate(ExampleHands.TWO_PAIRS, ExampleHands.TWO_PAIRS_1, Winner.HAND2);
     }
 
     @Test
     public void compareThreeOfAKind() {
-        validate(ExampleHands.THREE_OF_A_KIND, ExampleHands.THREE_OF_A_KIND_1, Winner.HAND1);
+        validate(ExampleHands.THREE_OF_A_KIND, ExampleHands.THREE_OF_A_KIND_1, Winner.HAND2);
     }
 
     @Test
     public void compareStraight() {
-        validate(ExampleHands.STRAIGHT, ExampleHands.STRAIGHT_1, Winner.HAND1);
+        validate(ExampleHands.STRAIGHT, ExampleHands.STRAIGHT_1, Winner.HAND2);
     }
 
     @Test
     public void compareFlush() {
-        validate(ExampleHands.FLUSH, ExampleHands.FLUSH_1, Winner.HAND1);
+        validate(ExampleHands.FLUSH, ExampleHands.FLUSH_1, Winner.HAND2);
     }
 
     @Test
     public void compareFullHouse() {
-        validate(ExampleHands.FULL_HOUSE, ExampleHands.FULL_HOUSE_1, Winner.HAND1);
+        validate(ExampleHands.FULL_HOUSE, ExampleHands.FULL_HOUSE_1, Winner.HAND2);
     }
 
     @Test
     public void compareFourOfAKind() {
-        validate(ExampleHands.FOUR_OF_A_KIND, ExampleHands.FOUR_OF_A_KIND_1, Winner.HAND1);
+        validate(ExampleHands.FOUR_OF_A_KIND, ExampleHands.FOUR_OF_A_KIND_1, Winner.HAND2);
     }
 
     @Test
     public void compareStraightFlush() {
-        validate(ExampleHands.STRAIGHT_FLUSH, ExampleHands.STRAIGHT_FLUSH_1, Winner.HAND1);
+        validate(ExampleHands.STRAIGHT_FLUSH, ExampleHands.STRAIGHT_FLUSH_1, Winner.HAND2);
     }
 
     /**
