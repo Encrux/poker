@@ -195,7 +195,7 @@ public class HandComparator {
 
         final var rest2 = hand2GroupedByValue
                 .values().stream()
-                .filter(group -> group.size() != 4)
+                .filter(group -> group.size() != n)
                 .flatMap(List::stream)
                 .collect(Collectors.toList());
 
